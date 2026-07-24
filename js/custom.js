@@ -27,6 +27,22 @@
       }, 300);
     }
 });
+ // READ MORE FEATURE
+  $('.read-more').click(function (e) {
+
+    e.preventDefault();
+
+    const paragraph = $(this).prev('.cause-text');
+
+    paragraph.toggleClass('show');
+
+    if (paragraph.hasClass('show')) {
+      $(this).text('Read Less');
+    } else {
+      $(this).text('Read More');
+    }
+
+  });
     
   })(window.jQuery);
 

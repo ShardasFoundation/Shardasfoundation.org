@@ -250,6 +250,39 @@ strong {
 }
 
 /*---------------------------------------
+  READ MORE / READ LESS FEATURE
+-----------------------------------------*/
+.cause-text {
+  display: -webkit-box;
+  line-clamp: 3;  
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cause-text.show {
+  display: block;
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+
+.read-more {
+  color: #5bc1ac;
+  font-weight: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+.cause-text.show {
+  display: block;
+}
+
+/*---------------------------------------
   PROGRESS BAR               
 -----------------------------------------*/
 .progress {
@@ -398,10 +431,12 @@ strong {
   width: 200px;
   height: auto;
   border-radius: var(--border-radius-large);
+  /*
   border-top-left-radius: ;
   border-top-right-radius: ;
   border-bottom-right-radius: ;
   border-bottom-left-radius: ;
+  */
 }
 .navbar-expand-lg .navbar-nav .nav-link {
   margin-right: 0;
