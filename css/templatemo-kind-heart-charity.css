@@ -2016,6 +2016,7 @@ blockquote::before {
     height:100%;
     object-fit:cover;
     object-position:right 35%;
+    border-radius: 20px;
 }
 
 .highlight-content {
@@ -2076,19 +2077,6 @@ blockquote::before {
     align-items: center;
 }
 
-
-.highlight-image{
-    width:350px;
-    flex-shrink:0;
-}
-
-.highlight-image img{
-    width:480px;
-    height:320px;
-    object-fit:cover;
-    object-position: center;
-    border-radius:20px;
-}
 .highlight-description{
     text-align: justify;
     text-justify: inter-word;
@@ -2102,20 +2090,37 @@ blockquote::before {
 
 
 @media (max-width:768px){
-  .highlight-card{
-    flex-direction: column;
-  }
-  .highlight-image{
-    width:100%;
-  }
-  .highlight-image img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    display: block;
-  }
-  .highlight-content{
-    padding-top:20px;
-  }
 
+    .highlight-card{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+        align-items:center;
+    }
+
+    .highlight-image{
+        width:100%;
+        max-width:none;
+        height:auto;
+        flex:none;
+    }
+    .highlight-image img{
+        width:100%;
+        height:auto;
+        object-fit:contain;
+        border-radius:20px;
+    }
+
+    .highlight-content{
+        width:100%;
+        padding:0;
+    }
+
+    .highlight-content h3{
+        font-size:2.2rem;
+    }
+
+    .highlight-content p{
+        text-align:justify;
+    }
 }
