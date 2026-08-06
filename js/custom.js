@@ -47,3 +47,29 @@
   })(window.jQuery);
 
 
+/*======================================
+    HIGHLIGHTS GALLERY
+======================================*/
+
+
+  const galleryImages = document.querySelectorAll(".highlight-image img");
+
+  function showImage(imageElement) {
+
+      document.getElementById("modalImage").src = imageElement.src;
+
+      document.getElementById("modalTitle").textContent = imageElement.alt;
+
+      const currentIndex = Array.from(galleryImages).indexOf(imageElement);
+
+      document.getElementById("imageCounter").textContent =
+          `${currentIndex + 1} / ${galleryImages.length}`;
+
+  }
+
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+
